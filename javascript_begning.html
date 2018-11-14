@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript tutorial</title>
+</head>
+<body>
+	<input type="text" name="input_number" id="input_value">
+	<br>
+	<button onclick="digit_value(1)" value="1" id="one">1</button>
+	<button onclick="digit_value(2)" value="2">2</button>
+	<button onclick="digit_value(3)" value="3">3</button>
+	<br>
+	<button onclick="digit_value(4)" value="4">4</button>
+	<button onclick="digit_value(5)" value="5">5</button>
+	<button onclick="digit_value(6)" value="6">6</button>
+	<br>
+	<button onclick="digit_value(7)" value="7">7</button>
+	<button onclick="digit_value(8)" value="8">8</button>
+	<button onclick="digit_value(9)" value="9">9</button>
+	<br>
+	<button onclick="digit_value()">.</button>
+	<button onclick="digit_value(0)" value="0">0</button>
+	<button onclick="digit_value()">=</button>
+	<script type="text/javascript">
+		//document.write("Hello javascript tutorial");
+		function digit_value(digit){
+			// console.log(digit);
+			document.getElementById("input_value").innerHTML=digit;
+			var y=document.getElementById('one').value;
+			console.log(y);
+
+		}
+		
+	</script>
+</body>
+</html>

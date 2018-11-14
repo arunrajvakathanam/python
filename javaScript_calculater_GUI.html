@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculater</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</head>
+<body>
+	
+	<p>Enter first number:</p>
+	<input type="text" name="firstNumber" id="first_number"/>
+	<p>Enter second number:</p>
+	<input type="text" name="secondNumber" id="second_number"/>
+	<br>
+	<!-- <button onclick="addtwonumbers()">+</button> -->
+<!-- 	<button onclick="minustwonumbers()">-</button>
+	<button onclick="multwonumbers()">*</button>
+	<button onclick="divtwonumbers()">/</button> -->
+
+	<!-- <p id="add">sum</p> -->
+	<script type="text/javascript">
+
+		function addtwonumbers(){
+			var x=document.getElementById('first_number').value;
+			console.log(x);
+			var y=document.getElementById('second_number').value;
+			console.log(y);
+			sum=+x + +y;
+			console.log(sum);
+			document.getElementById("add").innerHTML=sum;
+		}
+		function minustwonumbers(){
+			var x=document.getElementById('first_number').value;
+			console.log(x);
+			var y=document.getElementById('second_number').value;
+			console.log(y);
+			sum=x-y;
+			console.log(sum);
+			document.getElementById("subtract").innerHTML=sum;
+		}
+		function multwonumbers(){
+			var x=document.getElementById('first_number').value;
+			console.log(x);
+			var y=document.getElementById('second_number').value;
+			console.log(y);
+			sum=x * y;
+			console.log(sum);
+			document.getElementById("multi").innerHTML=sum;
+		}
+		function divtwonumbers(){
+			var x=document.getElementById('first_number').value;
+			console.log(x);
+			var y=document.getElementById('second_number').value;
+			console.log(y);
+			sum=x / y;
+			console.log(sum);
+			document.getElementById("divisi").innerHTML=sum;
+		}
+	</script>
+	<!-- Inline button  -->
+	<ul class="list-inline">
+	  	<li class="list-inline-item">
+	  	<!-- Add button -->
+		<p>
+		  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseAddition" aria-expanded="false" aria-controls="collapseAddition" onclick="addtwonumbers()">
+		    +
+		  </button>
+		</p>
+		<div class="collapse" id="collapseAddition">
+		  <div class="card card-body">	
+	 		<p id="add">sum</p>
+	 	  </div>
+		</div>
+		</li>
+		 <li class="list-inline-item">
+		  	<!-- Subtraction button -->
+			<p>
+			  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" onclick="minustwonumbers()">
+			    -
+			  </button>
+			</p>
+			<div class="collapse" id="collapseExample">
+			  <div class="card card-body">	
+		 		<p id="subtract">sum</p>
+		 	  </div>
+			</div>
+		</li>
+	  <li class="list-inline-item">
+	  	<!-- Multiplication -->
+		<p>
+		  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseMul" aria-expanded="false" aria-controls="collapseMul" onclick="multwonumbers()">
+		    *
+		  </button>
+		</p>
+		<div class="collapse" id="collapseMul">
+		  <div class="card card-body">	
+	 		<p id="multi">sum</p>
+	 	  </div>
+		</div>
+	  </li>
+	  <li class="list-inline-item">
+	  		<!-- Division -->
+			<p>
+			  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseDiv" aria-expanded="false" aria-controls="collapseMul" onclick="divtwonumbers()">
+			    /
+			  </button>
+			</p>
+			<div class="collapse" id="collapseDiv">
+			  <div class="card card-body">	
+		 		<p id="divisi">sum</p>
+		 	  </div>
+			</div>
+	  </li>
+	</ul>
+<!-- 	Add button
+	<p>
+	  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseAddition" aria-expanded="false" aria-controls="collapseAddition" onclick="addtwonumbers()">
+	    +
+	  </button>
+	</p>
+	<div class="collapse" id="collapseAddition">
+	  <div class="card card-body">	
+ 		<p id="add">sum</p>
+ 	  </div>
+	</div>
+	Subtraction button
+	<p>
+	  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" onclick="minustwonumbers()">
+	    -
+	  </button>
+	</p>
+	<div class="collapse" id="collapseExample">
+	  <div class="card card-body">	
+ 		<p id="subtract">sum</p>
+ 	  </div>
+	</div>
+	Multiplication
+	<p>
+	  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseMul" aria-expanded="false" aria-controls="collapseMul" onclick="multwonumbers()">
+	    *
+	  </button>
+	</p>
+	<div class="collapse" id="collapseMul">
+	  <div class="card card-body">	
+ 		<p id="multi">sum</p>
+ 	  </div>
+	</div>
+	Division
+	<p>
+	  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseDiv" aria-expanded="false" aria-controls="collapseMul" onclick="divtwonumbers()">
+	    /
+	  </button>
+	</p>
+	<div class="collapse" id="collapseDiv">
+	  <div class="card card-body">	
+ 		<p id="divisi">sum</p>
+ 	  </div>
+	</div> --> 
+</body>
+</html>

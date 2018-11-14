@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Java script keyboard Event</title>
+</head>
+<body>
+		<!-- onkey down -->
+		<p>Press a key on the keyboard in the input field.</p>
+
+		<input type="text" size="40" onkeydown="myFunction(event)">
+
+		<p id="demo"></p>
+
+		<script>
+		function myFunction(event) {
+		    var x = event.key;
+		    document.getElementById("demo").innerHTML = "The pressed key was: " + x;
+		}
+		</script>
+
+		<!-- onkey up -->
+		Enter your name: <input type="text" id="fname" onkeyup="myFunction_onkeyup()">
+
+		<p>My name is: <span id="demo_onkeyup"></span></p>
+
+		<script>
+		function myFunction_onkeyup() {
+		    var x = document.getElementById("fname").value;
+		    document.getElementById("demo_onkeyup").innerHTML = x;
+		}
+		</script>
+		<!-- onkeypress -->
+		<p>A function is triggered when the user is pressing a key in the input field.</p>
+
+		<input type="text" onkeypress="myFunction_onkeypress()">
+
+		<script>
+		function myFunction_onkeypress() {
+		    alert("You pressed a key inside the input field");
+		}
+		</script>
+</body>
+</html>

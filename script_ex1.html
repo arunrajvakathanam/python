@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Java Script first</title>
+</head>
+<body>
+	<p id="demo"></p>
+	<script type="text/javascript">
+		var x=10;
+		var y=x+20;
+		//document.getElementBuId("demo").innerHTML=y;
+		console.log(y);
+		//java script variable
+		//string are two type
+		var hello="Hello world";
+		console.log(hello);
+
+		var stringobj=new String("Hello");
+		console.log(stringobj);;
+
+		var whiteSpaceString=new String("some white spaces like this   ");
+		console.log(whiteSpaceString);
+		var whiteSpaceStringNew=new String(whiteSpaceString.trim());
+		console.log(whiteSpaceStringNew);
+
+		var splitString="one,two,three";
+		console.log(splitString);
+		console.log(splitString.split(","));
+
+		console.log(splitString.split(",").join("-"));
+
+		console.log(splitString.toUpperCase());
+
+		//console.log(splitString.Uppercase());
+
+		console.log(splitString.lastIndexOf("o"));
+	</script>
+
+</body>
+</html>
